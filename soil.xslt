@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:template match="/soil">
+  <xsl:template match="/soil-data">
     <html>
       <head>
         <title>SoilDB XSLT</title>
@@ -41,7 +41,7 @@
             <th>ELECTRIC CONDUCTIVITY</th>
             <th>SPECTRAL RESPONSE</th>
           </tr>
-          <xsl:for-each select="register">
+          <xsl:for-each select="data-entry">
             <tr bgcolor="#fbfaf0">
               <td>
                 <xsl:value-of select="code" />
@@ -57,6 +57,9 @@
               </td>
               <td>
                 <xsl:value-of select="coordinates-y" />
+              </td>
+              <td>
+                <xsl:value-of select="altitude" />
               </td>
               <td>
                 <xsl:value-of select="incline" />
