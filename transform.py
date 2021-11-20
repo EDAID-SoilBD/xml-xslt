@@ -2,7 +2,7 @@
 
 import lxml.etree as ET
 
-dom = ET.parse("soil.xml")
+dom = ET.parse("soildb-data.xml")
 
 xslt = ET.parse("soil.xslt")
 
@@ -12,7 +12,7 @@ newdom = transform(dom)
 
 print(newdom)
 
-f = open("patients.html", "w")
+f = open("soil.html", "w")
 
 f.write(str(newdom))
 
